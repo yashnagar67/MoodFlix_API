@@ -1,10 +1,11 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 import { fileURLToPath } from "url";
 
 const lastscrp = async (Url) => {
   const browser = await puppeteer.launch({
+    executablePath: '/usr/bin/google-chrome-stable', // Ya '/usr/bin/chromium-browser'
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
   const page = await browser.newPage();
