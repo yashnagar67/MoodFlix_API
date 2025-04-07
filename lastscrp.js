@@ -1,4 +1,5 @@
-const puppeteer = require("puppeteer");
+import puppeteer from "puppeteer";
+import { fileURLToPath } from "url";
 
 const lastscrp = async (Url) => {
   const browser = await puppeteer.launch({
