@@ -29,4 +29,4 @@ const lastscrp = async (Url) => {
   }
 };
 
-module.exports = { lastscrp };
+export { lastscrp };
